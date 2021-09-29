@@ -11,4 +11,4 @@ Review.belongsTo(Product)
 
 
 
-export default { Product, Review };
+export default { Product, Review }
