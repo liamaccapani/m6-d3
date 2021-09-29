@@ -1,3 +1,4 @@
+// create template instance for database test an connection
 import { Sequelize } from "sequelize";
 
 const { PGDATABASE, PGHOST, PGPASSWORD, PGPORT, PGUSER } = process.env
@@ -23,7 +24,7 @@ export const testDB = async () => {
 /* 2. establish connection --> sync() */
 export const connectDB = async () => {
     try {
-       await sequelize.sync()
+       await sequelize.sync({alter:true})
        console.log("🔗 DB is connected") 
     } catch (error) {
         console.log(error)

@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import { connectDB, testDB} from "./db/index.js";
+import { connectDB, testDB } from "./db/index.js";
+import db from "./db/models/models.js"
 
 const server = express()
 
